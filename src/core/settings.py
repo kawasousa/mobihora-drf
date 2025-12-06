@@ -19,7 +19,10 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework_simplejwt',
+    'django.contrib.gis',
+    'rest_framework_gis',
     'users',
+    'busstops'
 ]
 
 AUTH_USER_MODEL = 'users.User'
@@ -69,7 +72,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': environ.get('PG_NAME'),
         'USER': environ.get('PG_USER'),
         'PASSWORD': environ.get('PG_PASSWORD'),
