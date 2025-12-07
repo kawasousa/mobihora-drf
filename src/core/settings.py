@@ -22,7 +22,8 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'rest_framework_gis',
     'users',
-    'busstops'
+    'busstops',
+    'routes'
 ]
 
 AUTH_USER_MODEL = 'users.User'
